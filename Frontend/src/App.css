@@ -1,0 +1,230 @@
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.dashboard {
+  min-height: 100vh;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.dashboard h1 {
+  text-align: center;
+  margin: 0 0 40px;
+  font-size: 2.5rem;
+}
+
+.device-grid {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.device-card {
+  padding: 28px;
+  border-radius: 16px;
+  background: #1f2028;
+  border: 1px solid #353743;
+
+  text-align: center;
+
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  transition: 
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.device-card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.device-card h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.value {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 4px; 
+}
+
+.device-card p {
+  margin: 8px 0;
+}
+
+.status {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: #263a2b;
+  color: #7ee787;
+  font-weight: 600;
+}
+
+.device-card small {
+  display: block;
+  margin-top: 16px;
+  opacity: 0.65;
+}
+
+@media (max-width: 600px) {
+  .dashboard {
+    padding: 20px;
+  }
+
+  .dashboard h1 {
+    font-size: 2rem;
+  }
+
+  .device-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.device-card.normal{
+  border-color: #355e3b;
+}
+
+.device-card.warning{
+  border-color: #8b2f2f;
+}
+
+.device-card.warning .status{
+  background: #4a2424;
+  color: #ff7b72;
+}
+
+.device-form {
+  max-width: 700px;
+  margin: 0 auto 30px;
+
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.device-form input {
+  padding: 10px 14px;
+  
+  border: 1px solid #353743;
+  border-radius: 8px;
+
+  background: #1f2028;
+  color: white;
+
+  font-size: 1rem;
+}
+
+.device-form input:focus {
+  outline: none;
+  border-color: #646cff;
+}
+
+.device-form button {
+  padding: 10px 16px;
+
+  border: none;
+  border-radius: 8px;
+
+  background-color: #646cff;
+  color: white;
+
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: transform 0.2s ease;
+}
+
+.device-form button:hover {
+  transform: translateY(-2px);
+}
+
+.edit-button,
+.delete-button,
+.toggle-button {
+  margin-top: 16px;
+  margin-right: 8px;
+
+  padding: 9px 16px;
+
+  border: none;
+  border-radius: 8px;
+
+  color: white;
+
+  font-weight:600;
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease;
+    opacity: 0.9s;
+}
+
+.edit-button {
+  background: #646cff;
+}
+
+.delete-button {
+  background: #8b2f2f;
+}
+
+.toggle-button {
+  background: #3a3d48;
+}
+
+.status-active {
+  background: #263a2b;
+  color: #7ee787;
+}
+
+.status-inactive {
+  background: #3a2a2a;
+  color: #ff7b72;
+}
+
+.device-card.inactve-card {
+  opacity: 0.75;
+  border-color: #555;
+}
+
+.device-card.inactive-card {
+  opacity: 0.9;
+}
+
+.inactive-message {
+  padding: 30px 0;
+  opacity: 0.7;
+}
+
+.inactive-icon {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.inactive-message p {
+  margin: 8px 0;
+}
+
+.device-form {
+  flex-direction: column;
+  width: 100%;
+}
+
+.device-form input,
+.device-form button {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.status {
+  background: #263a2b;
+  color: #7ee787;
+}
